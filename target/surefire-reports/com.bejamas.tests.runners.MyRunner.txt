@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.bejamas.tests.runners.MyRunner
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 205.478 s <<< FAILURE! - in com.bejamas.tests.runners.MyRunner
+User can not see the counter badge if it is empty(Add To Chart)  Time elapsed: 14.106 s  <<< FAILURE!
+java.lang.AssertionError: Verify the number of counter: 0
+
+The product list should contain 6 artworks(Product List)  Time elapsed: 12.01 s  <<< FAILURE!
+java.lang.AssertionError: verify actual size expected:<6> but was:<4>
+
+Best seller flag appears after hovering over the product(Product List)  Time elapsed: 12.206 s  <<< FAILURE!
+java.lang.AssertionError: Verify Size of Best Sellers= 3
+

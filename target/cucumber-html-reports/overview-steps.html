@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>08 Apr 2022, 16:58</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.addItemsFromProductListAndVerifyDropdownAppearsForEachAction()</td>
+              <td>1</td>
+              <td class="duration" data-value="18068540000">18.068</td>
+              <td class="duration" data-value="18068540000">18.068</td>
+              <td class="duration" data-value="18068540000">18.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.clickTheBasketIcon()</td>
+              <td>3</td>
+              <td class="duration" data-value="121830000">0.121</td>
+              <td class="duration" data-value="121830000">0.164</td>
+              <td class="duration" data-value="365490000">0.365</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.click_the_clear_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1076663000">1.076</td>
+              <td class="duration" data-value="1076663000">1.076</td>
+              <td class="duration" data-value="1076663000">1.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.the_user_adds_the_new_item()</td>
+              <td>4</td>
+              <td class="duration" data-value="1894253250">1.894</td>
+              <td class="duration" data-value="1894253250">1.993</td>
+              <td class="duration" data-value="7577013000">7.577</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.verifyTheDropdownAppearsAndCloseTheDropdown()</td>
+              <td>4</td>
+              <td class="duration" data-value="2171363500">2.171</td>
+              <td class="duration" data-value="2171363500">2.197</td>
+              <td class="duration" data-value="8685454000">8.685</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.verify_that_counter_badge_is_NOT_appear()</td>
+              <td>1</td>
+              <td class="duration" data-value="168639000">0.168</td>
+              <td class="duration" data-value="168639000">0.168</td>
+              <td class="duration" data-value="168639000">0.168</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.verify_the_message(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="60689000">0.060</td>
+              <td class="duration" data-value="60689000">0.060</td>
+              <td class="duration" data-value="60689000">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.AddToChartStepDefs.verify_the_number_of_counter_badge_is_the_same_with_added_products()</td>
+              <td>1</td>
+              <td class="duration" data-value="115859000">0.115</td>
+              <td class="duration" data-value="115859000">0.115</td>
+              <td class="duration" data-value="115859000">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.HomePageStepDefs.the_product_should_be_displayed_on_the_productlist()</td>
+              <td>1</td>
+              <td class="duration" data-value="37206000">0.037</td>
+              <td class="duration" data-value="37206000">0.037</td>
+              <td class="duration" data-value="37206000">0.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.HomePageStepDefs.the_product_should_have_special_message_under_the_picture()</td>
+              <td>1</td>
+              <td class="duration" data-value="134266000">0.134</td>
+              <td class="duration" data-value="134266000">0.134</td>
+              <td class="duration" data-value="134266000">0.134</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.HomePageStepDefs.the_user_navigates_to_homepage()</td>
+              <td>12</td>
+              <td class="duration" data-value="3476983500">3.476</td>
+              <td class="duration" data-value="3476983500">3.714</td>
+              <td class="duration" data-value="41723802000">41.723</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.Hooks.setUp()</td>
+              <td>12</td>
+              <td class="duration" data-value="7568077416">7.568</td>
+              <td class="duration" data-value="7568077416">8.936</td>
+              <td class="duration" data-value="90816929000">1:30.816</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>12</td>
+              <td class="duration" data-value="320631500">0.320</td>
+              <td class="duration" data-value="320631500">1.086</td>
+              <td class="duration" data-value="3847578000">3.847</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.PaginationStepDefs.clickOnTheArrowAndVerifyThePagesAreChanging(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6362441500">6.362</td>
+              <td class="duration" data-value="6362441500">7.915</td>
+              <td class="duration" data-value="12724883000">12.724</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.PaginationStepDefs.clickOnThePageNumberAndVerifyThePagesAreChanging()</td>
+              <td>1</td>
+              <td class="duration" data-value="7063747000">7.063</td>
+              <td class="duration" data-value="7063747000">7.063</td>
+              <td class="duration" data-value="7063747000">7.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.PaginationStepDefs.verify_the_page_numbers()</td>
+              <td>1</td>
+              <td class="duration" data-value="80515000">0.080</td>
+              <td class="duration" data-value="80515000">0.080</td>
+              <td class="duration" data-value="80515000">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.ProductListStepDefs.the_user_hover_over_the_product_pictures()</td>
+              <td>1</td>
+              <td class="duration" data-value="2208215000">2.208</td>
+              <td class="duration" data-value="2208215000">2.208</td>
+              <td class="duration" data-value="2208215000">2.208</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.ProductListStepDefs.the_user_hover_overs_the_product_list()</td>
+              <td>4</td>
+              <td class="duration" data-value="192516000">0.192</td>
+              <td class="duration" data-value="192516000">0.206</td>
+              <td class="duration" data-value="770064000">0.770</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.ProductListStepDefs.verifyThatBestSellerFlagIsDisabledAfterHoveringOver()</td>
+              <td>1</td>
+              <td class="duration" data-value="113225000">0.113</td>
+              <td class="duration" data-value="113225000">0.113</td>
+              <td class="duration" data-value="113225000">0.113</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.ProductListStepDefs.verify_add_to_chart_bars_are_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="8871453000">8.871</td>
+              <td class="duration" data-value="8871453000">8.871</td>
+              <td class="duration" data-value="8871453000">8.871</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.bejamas.tests.step_definitions.ProductListStepDefs.verify_the_number_of_the_product_list_is(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="24650000">0.024</td>
+              <td class="duration" data-value="24650000">0.024</td>
+              <td class="duration" data-value="24650000">0.024</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>66</td>
+            <td class="duration">3.099</td>
+            <td class="duration">1:30.816</td>
+            <td class="duration">3:24.534</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

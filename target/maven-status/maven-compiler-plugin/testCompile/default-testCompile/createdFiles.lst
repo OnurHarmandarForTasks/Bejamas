@@ -1,0 +1,12 @@
+com/bejamas/tests/step_definitions/AddToChartStepDefs.class
+com/bejamas/tests/runners/MyRunner.class
+com/bejamas/tests/utilities/Driver.class
+com/bejamas/tests/step_definitions/Hooks.class
+com/bejamas/tests/step_definitions/HomePageStepDefs.class
+com/bejamas/tests/runners/FailedTestRunner.class
+com/bejamas/tests/step_definitions/ProductListStepDefs.class
+com/bejamas/tests/pages/BasePage.class
+com/bejamas/tests/utilities/MyUtilities.class
+com/bejamas/tests/step_definitions/PaginationStepDefs.class
+com/bejamas/tests/utilities/ConfigurationReader.class
+com/bejamas/tests/pages/HomePage.class
